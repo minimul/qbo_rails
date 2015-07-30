@@ -9,8 +9,7 @@ gemspec
 # your gemspec. These might include edge Rails or gems from your path or
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
-#gem 'quickbooks-ruby-base', path: '/Users/christian/github/quickbooks-ruby-base'
-gem 'quickbooks-ruby', github: 'ruckus/quickbooks-ruby'
+#gem 'quickbooks-ruby', github: 'ruckus/quickbooks-ruby'
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
