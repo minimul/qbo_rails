@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox-quickbooks.api.intuit.com/v3/company/<COMPANY_ID>/customer
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <Customer xmlns="http://schema.intuit.com/finance/v3" sparse="false">
+        <DisplayName>Edward Rackowski</DisplayName>
+        <BillAddr>
+        <Line1>1 East Haskins Road</Line1>
+        <City>Nelson</City>
+        <CountrySubDivisionCode>NH</CountrySubDivisionCode>
+        <PostalCode>03457-4555</PostalCode>
+        </BillAddr>
+        </Customer>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - OAuth gem v0.4.7
+      Content-Length:
+      - '330'
+      Authorization:
+      - OAuth oauth_body_hash="BFoHUtDQ%2BwODp3BR3f2UvcMERRA%3D", oauth_consumer_key="<CONSUMER_KEY>",
+        oauth_nonce="oIKb9YuHVUYdsBiBZUybd7PfygXX1HN4JHBnlPt5qs", oauth_signature="SrQSv28OR%2FSyZmEfXswI62%2BsEcA%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1438087281", oauth_token="<ACCESS_TOKEN>",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 12:41:22 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Length:
+      - '533'
+      Intuit-Tid:
+      - 13d9f66e-1a9b-4c98-a082-756cfafc11c6
+      Via:
+      - 1.1 ipp-gateway-ap05
+      Cache-Control:
+      - max-age=0, no-cache, no-store, must-revalidate, private
+      Expires:
+      - '0'
+      Qbo-Version:
+      - '87.370'
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAIVT23LaMBD9FY3fwebWEEYoE3AySSclhMv0ebHWRYOQGEkm
+        8d93bUqhgUyfvHv27MW7R/zuY6vZHp1X1gyjVjOJGJrMSmV+DaPl4rHRj5gP
+        YCRoa3AYleijO8GfTShUmKHfWeORURHjh9E6hN0gjn22xi00Vc1pZnYb58qA
+        yTDedyIW1JbqtJNWr5HcNNr9RdIbdFuDdqd52+oQNEiSSPBx4YPdomPSbkHR
+        aG+jV5pkB85Tdg7aI7GepfiW8Jg+fF6abGE3aAQBJ4f/wAApBKCSDiHggtqL
+        y+7tQ2cen7H4C/iw3Eny5f/SPlN5fGr8WGhdvhWgVa5QToDCD/IdnGQzyDb2
+        3W8Uj6+QeKr8TkP5RcZ5lE8drfvVjNeYbb7gX1D4fRbUHkVwBfL4j8NTzKHQ
+        YQEfYytxhrloU68LkJMNK33MPnp8pLS+l9LVx7ntH47zogy2RIs90JbYE9A4
+        xrOZBUmLq0N8rEIpJqi9NXSDyuFjW5jgynmxStVeVQKteovJExGuh/jUklZ1
+        bSedbu+m0e31evTnJ5jHpwG/25WolcTjyqxH/6nCegoOTTiGPqF8BLrSciWz
+        o3nEKhpV8mexvxAp2lGBrKTlMQPVG1gaRXJh80Cq8Sy1WoOLxHKe0g+eyNVt
+        MUfyZYqaTuRKktbaSlEftLrr9XBV5fCIyPz3wYrfZsA6KfgDAAA=
+    http_version: 
+  recorded_at: Tue, 28 Jul 2015 12:41:22 GMT
+recorded_with: VCR 2.9.3

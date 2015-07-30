@@ -1,0 +1,167 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox-quickbooks.api.intuit.com/v3/company/<COMPANY_ID>/customer/18
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="<CONSUMER_KEY>", oauth_nonce="6i29i42iREgyJgf3M60yTxtQk3pgsya3HD7nTo2pFE",
+        oauth_signature="4H7sC68BmjtdLkpv4HOkkKW6QZs%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1438087489", oauth_token="<ACCESS_TOKEN>", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 12:44:50 GMT
+      Via:
+      - 1.1 ipp-gateway-ap06
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Length:
+      - '683'
+      Cache-Control:
+      - max-age=0, no-cache, no-store, must-revalidate, private
+      Expires:
+      - '0'
+      Intuit-Tid:
+      - 6fde1e5b-64e3-44a5-903c-5555f71ff362
+      Qbo-Version:
+      - '87.370'
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAL1U23KbMBD9FYan9sHcsQ0jK/Wl7rSNE6d2ps8yrIMmQjBI
+        eMLfdyF2IJeZvPXF1p49u9Jhj0SunnJhnKBSvJAz07Uc0wCZFCmXDzPzfr8e
+        TU1DaSZTJgoJM7MBZV5R8lPqmus/oMpCKjCwiVQzM9O6jG1bJRnkzOIdx0qK
+        3D5yyWQC9sk3Dc1z7OM5bjhyJiNvunfCOAji0LPGzhih2HFMSpa10kUOlZEW
+        OeN4tLvFLZ6kZJXC6iMTCpD1M6XulNj4R3aNTPbFI0jqELsPyAY0WzHNsGUF
+        TMMet6fPu49HXrB3J7Hrx/7keWdiD1jkmil9X6YYp6/KfGfvunHgx55zKXtL
+        JXa/8Q9+AnnDEP3NdNYQuwfImuVcNN16y2pUJYk9wMi6FqK5q5ngRw7pkGds
+        IOUJE8auLkvBQWHhezJZFnnJZPNJ5ZBFVlyVgn1WMmSRbYXTvpXLDJLHT+re
+        Uck80fhBqK5qIPY5aDvmrGq2GdoOP0MFsC6q/KbOD1DRL+PQ+WqE4WQUhOMI
+        hb9Od5sMqs/Rd3SSmKcpEtpfUIqej/et9yqe4Jx76TKo27MndhBAOwMS+xKS
+        BRdnxsCS11yCSyPHMTZoYWOnLfRJh5El1w3d8DQVgKMSKU6gRXBatdRVs6sP
+        K37i7aVcFinQ5bwd0Ycpsi3wfopuHQW+4+OxewQtrKk/sYIgdFy/talGrJAP
+        dOR6nuX6kRsELd5CxO5l7DJe9oKioSB/GnmusbOMRcHx7s9P8B9kBR/K8qNp
+        5E/G73WhqMgPX3T1an4Vh8vw2mU3uL9cZ1tWgdSX1BuULJho3y8ahYE1wbaX
+        +JJoudhOvSW84GhBOEJVQboCgf6uGnwesiKl3W1onfZxGr/P+SHE5etHl/4D
+        Gs5xIbwFAAA=
+    http_version: 
+  recorded_at: Tue, 28 Jul 2015 12:44:51 GMT
+- request:
+    method: post
+    uri: https://sandbox-quickbooks.api.intuit.com/v3/company/<COMPANY_ID>/customer
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <Customer xmlns="http://schema.intuit.com/finance/v3" sparse="true">
+        <Id>18</Id>
+        <SyncToken>0</SyncToken>
+        <MetaData>
+        <CreateTime>2015-06-24T20:13:37-0400</CreateTime>
+        <LastUpdatedTime>2015-06-30T14:43:20-0400</LastUpdatedTime>
+        </MetaData>
+        <GivenName>Kathy</GivenName>
+        <FamilyName>Paulsen</FamilyName>
+        <CompanyName>Paulsen Medical Supplies</CompanyName>
+        <DisplayName>Paulsen Medical Supplies</DisplayName>
+        <PrintOnCheckName>Paulsen Medical Supplies</PrintOnCheckName>
+        <Active>false</Active>
+        <PrimaryPhone>
+        <FreeFormNumber>(650) 557-4569</FreeFormNumber>
+        </PrimaryPhone>
+        <PrimaryEmailAddr>
+        <Address>Medical@intuit.com</Address>
+        </PrimaryEmailAddr>
+        <BillAddr>
+        <Id>18</Id>
+        <Line1>900 Main St.</Line1>
+        <City>Middlefield</City>
+        <CountrySubDivisionCode>CA</CountrySubDivisionCode>
+        <PostalCode>94303</PostalCode>
+        <Lat>37.445013</Lat>
+        <Long>-122.1391443</Long>
+        </BillAddr>
+        <ShipAddr>
+        <Id>19</Id>
+        <Line1>38921 S. Boise Ave</Line1>
+        <City>Middlefield</City>
+        <CountrySubDivisionCode>CA</CountrySubDivisionCode>
+        <PostalCode>94304</PostalCode>
+        <Lat>37.3989376</Lat>
+        <Long>-122.1443935</Long>
+        </ShipAddr>
+        <Job>false</Job>
+        <BillWithParent>false</BillWithParent>
+        <Balance>954.75</Balance>
+        <BalanceWithJobs>954.75</BalanceWithJobs>
+        <PreferredDeliveryMethod>Print</PreferredDeliveryMethod>
+        <FullyQualifiedName>Paulsen Medical Supplies</FullyQualifiedName>
+        <Taxable>false</Taxable>
+        </Customer>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - OAuth gem v0.4.7
+      Content-Length:
+      - '1411'
+      Authorization:
+      - OAuth oauth_body_hash="xqA%2F%2FRX0%2BV8WOREnESmD8Ro5NZs%3D", oauth_consumer_key="<CONSUMER_KEY>",
+        oauth_nonce="cIQcelhZ8zEovv3mXOSNi2gLzrvL30cPtyUaA1vFREo", oauth_signature="aJq%2FuDHa25VGFjJawygdl%2BHANKQ%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1438087491", oauth_token="<ACCESS_TOKEN>",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 12:44:51 GMT
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '310'
+      Intuit-Tid:
+      - f7598afb-a40d-4b01-a259-4568542f99c8
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 ipp-gateway-ap06
+      Content-Encoding:
+      - gzip
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA1WQW0+DUAyA/0pz3rmMXZwEWGLmoom+GPS9gzpOAj2EUxbx
+        19uxaeJTm16+fG22++paONPgrePcLMLYAHHlasun3LyXh2BrwAtyja1jys1E
+        3uyK7JlltPJGvnfsCRTCPjeNSJ9Gka8a6jC080xYuS76tIxcUXReGhDbKSeJ
+        F+sgvguSbRmv09UqXS/D1f1GS2kcmyI74NgKyNTr7Ae2tkZRw7mq3cdhcAOo
+        pnY3SXKRbqkjltxo95W8xxMVey0KwYv1Ak/o4QHbiwXM21n0O5btSdC2RdmQ
+        3i5WJpjcCDgQyDDpI0Ac1FdWoxhkcD0xHK+4EFIoG+uhGr24jtQLmZ3AkW5b
+        taYVjvonK1cCsOPgmwb3B8mim0UWzXoa52M1/v918QNO1hY+swEAAA==
+    http_version: 
+  recorded_at: Tue, 28 Jul 2015 12:44:52 GMT
+recorded_with: VCR 2.9.3

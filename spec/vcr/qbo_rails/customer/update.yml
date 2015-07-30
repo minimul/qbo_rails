@@ -1,0 +1,138 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox-quickbooks.api.intuit.com/v3/customer/60
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="<CONSUMER_KEY>", oauth_nonce="GCXIlXIO78rxujRnG2ruEGWGYmZFBAwVT7ivGstfcI",
+        oauth_signature="kSEw1EOGcwNCTJvlNcRZ0riH1PY%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1438087451", oauth_token="<ACCESS_TOKEN>", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 12:44:12 GMT
+      Content-Encoding:
+      - gzip
+      Via:
+      - 1.1 ipp-gateway-ap05
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Length:
+      - '573'
+      Intuit-Tid:
+      - 037bdb02-8ea0-4053-a01b-3fd1fb701c02
+      Cache-Control:
+      - max-age=0, no-cache, no-store, must-revalidate, private
+      Expires:
+      - '0'
+      Qbo-Version:
+      - '87.370'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAHVT23LiMAz9FU/eIRcIBca405J22p1uL1xmn9VYFA/GZmyH
+        Nn9fJSxLt5e8RNI5kmzpmJ+/bTXbo/PKmkmUdpOIoSmtVOZlEi0X151hxHwA
+        I0Fbg5OoRh+dC35rQqXCDP3OGo+Mihg/idYh7MZx7Ms1bqGrWk63tNt4pQyY
+        EuN9L2JBbalOlqR5JznrZMNFko/7/XGad/vDEYXGSRIJPq18sFt0TNotKDra
+        0+UDnWQHzlP2CrRHYt1KMUh4TD8+r025sBs0IuXxyeG/MUABAaikQwi4oPbi
+        U/d0nGWHzjz+wOJ34MNyJ8mXP6QNj2mfqTw+Nb6utK6fKtBqpVDeA8FX8hWc
+        ZDMoN/bVbxSPvyHxQvmdhvqHjI8of3Q07gczXWO5+YH/hcIvyqD2KIKrkMd/
+        HV7gCiodFvA2tRJnuBIZ9foS5GTDsz5mHz1+qbS+kNK1yxkND8u5UwZTkbIr
+        mhK7ATqO8WxmQdLgWohPVajFPWpvDe2gcfjUVia4el49F2qvGoE2vcX9DRG+
+        h/ijJa3q1k56/fys08/znG5+CtNOg+hn3dEoGfQGabO4QEFrXkTnLOumvWSU
+        DvLR4SO0AXh8utQv+yxa9fG4Mdvr/lFh/QgOTThCn6L8EnSjf0FCOZrHWEOj
+        Sv4D9i9Er8BRgbKmgTMDzbtZGkUSY/NASvOssFqDi8RyXtBQTuRGD7hC8mWB
+        mtbqapLj2krRiqDRwvdwU+Xw8Mj8/5GLd7eh/eYsBAAA
+    http_version: 
+  recorded_at: Tue, 28 Jul 2015 12:44:14 GMT
+- request:
+    method: post
+    uri: https://sandbox-quickbooks.api.intuit.com/v3/company/<COMPANY_ID>/customer
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <Customer xmlns="http://schema.intuit.com/finance/v3" sparse="false">
+        <Id>60</Id>
+        <SyncToken>1</SyncToken>
+        <DisplayName>Edward Rackowski</DisplayName>
+        <BillAddr>
+        <Line1>1 East Haskins Road</Line1>
+        <City>Nelson</City>
+        <CountrySubDivisionCode>NH</CountrySubDivisionCode>
+        <PostalCode>03457-4555</PostalCode>
+        </BillAddr>
+        </Customer>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - OAuth gem v0.4.7
+      Content-Length:
+      - '367'
+      Authorization:
+      - OAuth oauth_body_hash="yyIRtpKtjr%2Bn%2FWCjCe%2FF04qBgAE%3D", oauth_consumer_key="<CONSUMER_KEY>",
+        oauth_nonce="qFPnnHwGwGnbs6IpKNi7eDSKpPUDRhW9ZPdTyj5AA", oauth_signature="lOnxRVzPCtwfT4FmfZUPc15xUwk%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1438087454", oauth_token="<ACCESS_TOKEN>",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 12:44:14 GMT
+      Via:
+      - 1.1 ipp-gateway-ap06
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Length:
+      - '574'
+      Cache-Control:
+      - max-age=0, no-cache, no-store, must-revalidate, private
+      Expires:
+      - '0'
+      Intuit-Tid:
+      - 32be2fb5-2945-4c05-be20-794057fd2dce
+      Qbo-Version:
+      - '87.370'
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAHVT23LiMAz9FU/eIRcSWhjjTiHttDvdXrjMPptYFA/GZmyH
+        Nn9fOSxLt6V5iaRzJNnSMb163yqyB+uk0aMo7SYRAV0ZIfXrKFrMbzuXEXGe
+        a8GV0TCKGnDRFaP32tfST8HtjHZAsIh2o2jt/W4Yx65aw5Z3ZcvpVmYbr6Tm
+        uoJ434uIl1uskyVp0UkuOtnlPCmGeT5M+908D6FhkkSMTmrnzRYsEWbLJR7t
+        ZfyEJ9lx6zB7xZUDZN0L1k9ojD86a3Q1NxvQLKPxyaG/wfOSe44lLXAPc2zP
+        vnRPh1l26EzjTyz6wJ1f7AT64lwaHjo/pn2l0vjU+LZWqnmpuZIrCeKRI3wj
+        3rgVZMqrjXlzG0njMyRaSrdTvPkh4zNKny2O+0lP1lBtfuB/o9Dryss9MG9r
+        oPFfh5aw4rXyc/4+MQKmsAoD/R6kaPOlOmYfPTqWSl0LYdvlDC4Py3mQGlKW
+        khucErnjeBztyNRwgYNrITqRvmGPoJzRuIPg0ImptbfNrF6Wci+DQENv9niH
+        hPMQfTaoVdXaSS8vLjp5URR481MYd+pZnnUHg6Tf66dhcR6DRr+yzkXWTXvJ
+        IO0Xg8OHaABofLrUL7NkrfpoHMz2un+kXz9zC9ofoS9ROuYq6J+hUI7mMRZo
+        WMl9wv6F8BVYLFA1OHCieXg3Cy1RYmTmUWmOlEYpbiO2mJU4lBM56AFWgL4o
+        QeFabYNyXBvBWhEELZyHQ5XDw0Pz/0fOPgA9uNewLAQAAA==
+    http_version: 
+  recorded_at: Tue, 28 Jul 2015 12:44:14 GMT
+recorded_with: VCR 2.9.3

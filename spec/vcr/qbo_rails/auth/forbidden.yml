@@ -1,0 +1,119 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox-quickbooks.api.intuit.com/v3/company/<COMPANY_ID>/customer
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <Customer xmlns="http://schema.intuit.com/finance/v3" sparse="false">
+        <DisplayName>Emer Rackowski</DisplayName>
+        <BillAddr>
+        <Line1>1 East Haskins Road</Line1>
+        <City>Nelson</City>
+        <CountrySubDivisionCode>NH</CountrySubDivisionCode>
+        <PostalCode>03457-4555</PostalCode>
+        </BillAddr>
+        </Customer>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - OAuth gem v0.4.7
+      Content-Length:
+      - '328'
+      Authorization:
+      - OAuth oauth_body_hash="wOxVokZqs%2Bk30usLgAdy7znRwi8%3D", oauth_consumer_key="<CONSUMER_KEY>",
+        oauth_nonce="zWdOSUkuPocTnVUe0EsjHC79J4VlrPHWOmGp1vYBDHI", oauth_signature="PzphZUOTiPsxw7Jjn3D1WjymsXI%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1438088072", oauth_version="1.0"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 05:54:33 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '391'
+      Intuit-Tid:
+      - gw-f7a67ea9-4700-49d6-86f4-dc5a61402919
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        <IntuitResponse time="2015-07-28T05:54:33.302-07:00" xmlns="http://schema.intuit.com/finance/v3">
+            <Fault type="SERVICE">
+                <Error code="3100">
+                    <Message>message=ApplicationAuthorizationFailed; errorCode=003100; statusCode=403</Message>
+                    <Detail></Detail>
+                </Error>
+            </Fault>
+        </IntuitResponse>
+    http_version: 
+  recorded_at: Tue, 28 Jul 2015 12:54:33 GMT
+- request:
+    method: post
+    uri: https://sandbox-quickbooks.api.intuit.com/v3/company/<COMPANY_ID>/customer
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <Customer xmlns="http://schema.intuit.com/finance/v3" sparse="false">
+        <DisplayName>Emer Rackowski</DisplayName>
+        <BillAddr>
+        <Line1>1 East Haskins Road</Line1>
+        <City>Nelson</City>
+        <CountrySubDivisionCode>NH</CountrySubDivisionCode>
+        <PostalCode>03457-4555</PostalCode>
+        </BillAddr>
+        </Customer>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - OAuth gem v0.4.7
+      Content-Length:
+      - '328'
+      Authorization:
+      - OAuth oauth_body_hash="wOxVokZqs%2Bk30usLgAdy7znRwi8%3D", oauth_consumer_key="<CONSUMER_KEY>",
+        oauth_nonce="C6UZNm1YCqS60GuRCY7WIGgLd4Q4aomzr8Q2lgak0", oauth_signature="gzEllkcc5E%2BuYl9VHgOJ38yx9cs%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1438088073", oauth_version="1.0"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 05:54:33 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '391'
+      Intuit-Tid:
+      - gw-4454c2b3-e4b4-4d8d-a757-41b2e1baa532
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        <IntuitResponse time="2015-07-28T05:54:33.901-07:00" xmlns="http://schema.intuit.com/finance/v3">
+            <Fault type="SERVICE">
+                <Error code="3100">
+                    <Message>message=ApplicationAuthorizationFailed; errorCode=003100; statusCode=403</Message>
+                    <Detail></Detail>
+                </Error>
+            </Fault>
+        </IntuitResponse>
+    http_version: 
+  recorded_at: Tue, 28 Jul 2015 12:54:33 GMT
+recorded_with: VCR 2.9.3

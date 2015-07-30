@@ -1,0 +1,14 @@
+<h2>
+    Please wait .. we are recieving information back from QuickBooks Online
+</h2>
+
+<% content_for :script do  %>
+setTimeout(function(){
+    if(window.opener == null){
+      window.location = '<%= @url %>';
+    }else{
+      window.opener.location = '<%= @url %>';
+      window.close();
+    }
+}, 5000);
+<% end %>

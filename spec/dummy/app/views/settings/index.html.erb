@@ -1,0 +1,29 @@
+
+<% if creds = session[:at] %>
+  <h4>Copy these creds to your .env file</h4>
+  <pre>
+export QBO_RAILS_ACCESS_TOKEN=<%= creds['token'] %>
+export QBO_RAILS_ACCESS_TOKEN_SECRET=<%= creds['secret'] %>
+export QBO_RAILS_COMPANY_ID=<%= creds['companyid'] %>
+  </pre>
+<% else %>
+    <div>
+      <fieldset>
+        <h3>Grab Sandbox Auth creds for testing</h3>
+        <p>
+          <ipp:connectToIntuit></ipp:connectToIntuit>
+        </p>
+      </fieldset>
+    </div>
+<% end %>
+
+<% content_for :head do %>
+  <script type="text/javascript" src="https://appcenter.intuit.com/Content/IA/intuit.ipp.anywhere.js"></script>
+
+<% end %>
+
+<% content_for :script do %>
+    intuit.ipp.anywhere.setup({ grantUrl: '<%= oauth_start_url %>',
+                            datasources: { quickbooks : true, payments : false }
+                          });
+<% end %>

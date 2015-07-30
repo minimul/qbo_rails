@@ -1,0 +1,225 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox-quickbooks.api.intuit.com/v3/company/<COMPANY_ID>/customer
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <Customer xmlns="http://schema.intuit.com/finance/v3" sparse="false">
+        <DisplayName>Mathis Rackowski</DisplayName>
+        <BillAddr>
+        <Line1>1 East Haskins Road</Line1>
+        <City>Nelson</City>
+        <CountrySubDivisionCode>NH</CountrySubDivisionCode>
+        <PostalCode>03457-4555</PostalCode>
+        </BillAddr>
+        </Customer>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - OAuth gem v0.4.7
+      Content-Length:
+      - '330'
+      Authorization:
+      - OAuth oauth_body_hash="T%2F2fKTAVGLi641Bwd6duT46fsI0%3D", oauth_consumer_key="<CONSUMER_KEY>",
+        oauth_nonce="BzRFyMsvHP5uFgxnh9rA19mNgz6I8fplJW3wcN2QN0A", oauth_signature="PbyU1Ol6FdEG7zt5oTW8Lw0af8c%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1438087744", oauth_token="<ACCESS_TOKEN>",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 12:49:05 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Length:
+      - '534'
+      Intuit-Tid:
+      - e8528f03-bfac-4847-8c4f-5d7f0fe357ef
+      Via:
+      - 1.1 ipp-gateway-ap06
+      Cache-Control:
+      - max-age=0, no-cache, no-store, must-revalidate, private
+      Expires:
+      - '0'
+      Qbo-Version:
+      - '87.370'
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAIVT23LaMBD9FY/fweZibiOUCbiZpJMQwmX6vFjrWoMsMZZM
+        47/v2imFBjJ98u6esxfvHrG791x5RyysNHrqd9qh76FOjJD659Tfbh5aI9+z
+        DrQAZTRO/Qqtf8fZk3aldCu0B6MtelRE26mfOXeYBIFNMsyhLRtOOzF5kEoN
+        OsHg2PM9J3Oq0w07USsctrqjTRhN+uNJOGr3BgMKTcLQ52xeWmdyLDxhcpA0
+        2tvslSY5QGEpOwVlkVhPgg+6LKAPW1c62Zg9ah6y4OywF3QQgwMqWSA43FB7
+        ft19+NGZBRcs9gzWbQ+CfPG/tM9UFpwbP5RKVW8lKJlKFAsg+AVcJq23gmRv
+        ftm9ZMENEoulPSiovsi4RNmyoHW/6nmGyf4L/hWF3SdOHpG7okQW/HFYjCmU
+        ym3gfW4ErjDltOHrICMbduqUffLYTCp1L0TRHGc8/jjOs9TY4R3vG23JewQa
+        R9NoBgQtroHYXLqKL1BZo+kGtcPmptSuqNblLpZHWQu07s0Xj0S4DbGlIa2q
+        xg57/WjY6kdRRH9+DrPgPOB3s+ONklhQm83oP6TLllCgdifoU5TNQNVarmV2
+        Mk+xmkaV7AX2N0SKLqhAUtHyPA31G9hqSXLx1o5UY73YKAWFz7frmH7wTK5v
+        iymSL2JUdKKiImllRvDmoPVdb8N1lY9HROa/D5b/BgFWq8H4AwAA
+    http_version: 
+  recorded_at: Tue, 28 Jul 2015 12:49:07 GMT
+- request:
+    method: get
+    uri: https://sandbox-quickbooks.api.intuit.com/v3/company/<COMPANY_ID>/customer/62
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="<CONSUMER_KEY>", oauth_nonce="A5kRxC3bYkKGxMf3cUNgwoB5RLzlHs2dR19k8",
+        oauth_signature="C2bUgR6V%2F007jbxZAiNpvyadHp0%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1438087747", oauth_token="<ACCESS_TOKEN>", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 12:49:07 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Length:
+      - '534'
+      Intuit-Tid:
+      - 898d68ac-f996-4dba-a4ec-cb5319e69a4c
+      Content-Encoding:
+      - gzip
+      Via:
+      - 1.1 ipp-gateway-ap05
+      Cache-Control:
+      - max-age=0, no-cache, no-store, must-revalidate, private
+      Expires:
+      - '0'
+      Qbo-Version:
+      - '87.370'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAIVT23LaMBD9FY3fwebiJjBCmYCbSToJIVymz4u1rjUIibFk
+        Gv991qYUGsj0ybt7zl68e8Tv3rea7bFwyppR0GlHAUOTWqnMr1GwWj60bgPm
+        PBgJ2hocBRW64E7wJ+NL5efodtY4ZFTEuFGQe78bhqFLc9xCWzWcdmq3YaYM
+        mBTDfS9gXm2pTjfqxK3optW9XUbxsD8YRoN2r9+n0DCKAsEnpfN2iwWTdguK
+        Rnsbv9IkOygcZWegHRLrSYpvXR7Shy8qky7tBo2IeHhy+At6SMADlSwQPC6p
+        vbjsfnPozMMzFn8G51c7Sb78X9pnKg9PjR9Krau3ErTKFMopEPwCPleOzSHd
+        2N9uo3h4hcQT5XYaqi8yzlE+K2jdr2aSY7r5gn9B4fepV3sUviiRh38cnmAG
+        pfZLeJ9YiXPMBG34MsjJhrU+Zh89PlZa30tZNMcZDA7HeVYGO6LDvtOW2CPQ
+        OIZGsyBpcQ3EJ8pXYoraWUM3qB0+saXxRbUo14naq1qgdW8xfSTCdYjPLGlV
+        N3bU68c3rX4cx/TnpzAPTwP+sGvRKImHtdmM/lP5fAYFGn+EPkX5GHSt5Vpm
+        R/MYq2lUyZ1hf0Ok6IIKpBUtjxmo38DKKJILW3hSjWOJ1RqKQKwWCf3giVzf
+        FjMkXyao6URFRdLKrRTNQeu7XofrKodHROa/D1Z8AOmUsUb4AwAA
+    http_version: 
+  recorded_at: Tue, 28 Jul 2015 12:49:08 GMT
+- request:
+    method: post
+    uri: https://sandbox-quickbooks.api.intuit.com/v3/company/<COMPANY_ID>/customer
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <Customer xmlns="http://schema.intuit.com/finance/v3" sparse="true">
+        <Id>62</Id>
+        <SyncToken>0</SyncToken>
+        <MetaData>
+        <CreateTime>2015-07-28T08:49:07-0400</CreateTime>
+        <LastUpdatedTime>2015-07-28T08:49:07-0400</LastUpdatedTime>
+        </MetaData>
+        <DisplayName>Mathis Rackowski</DisplayName>
+        <PrintOnCheckName>Mathis Rackowski</PrintOnCheckName>
+        <Active>false</Active>
+        <BillAddr>
+        <Id>99</Id>
+        <Line1>1 East Haskins Road</Line1>
+        <City>Nelson</City>
+        <CountrySubDivisionCode>NH</CountrySubDivisionCode>
+        <PostalCode>03457-4555</PostalCode>
+        </BillAddr>
+        <Job>false</Job>
+        <BillWithParent>false</BillWithParent>
+        <Balance>0.0</Balance>
+        <BalanceWithJobs>0.0</BalanceWithJobs>
+        <PreferredDeliveryMethod>Print</PreferredDeliveryMethod>
+        <FullyQualifiedName>Mathis Rackowski</FullyQualifiedName>
+        <Taxable>true</Taxable>
+        <DefaultTaxCodeRef>2</DefaultTaxCodeRef>
+        <CurrencyRef name="United States Dollar">USD</CurrencyRef>
+        </Customer>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - OAuth gem v0.4.7
+      Content-Length:
+      - '945'
+      Authorization:
+      - OAuth oauth_body_hash="Q0kawIhgwOk9q0wA8Nb%2BVRfghyY%3D", oauth_consumer_key="<CONSUMER_KEY>",
+        oauth_nonce="mlSEBPzlha8pBDCtmD46VTo3zaQYELJJGcQpRh2XNQ", oauth_signature="e%2BULdmt%2Bc5o1iGHVVy5otnAA%2F7A%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1438087748", oauth_token="<ACCESS_TOKEN>",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Jul 2015 12:49:08 GMT
+      Via:
+      - 1.1 ipp-gateway-ap05
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Length:
+      - '546'
+      Cache-Control:
+      - max-age=0, no-cache, no-store, must-revalidate, private
+      Expires:
+      - '0'
+      Intuit-Tid:
+      - 2a0318b5-a231-43de-9904-a2d1440e8230
+      Qbo-Version:
+      - '87.370'
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAIVT23LaMBD9FY2f2gewTaABRiiT4GaSTkIIl+nzYq1rDUJi
+        LJnGf9+1Uxca6PRJezl7PSt+87bT7ICFU9ZMgrgbBQxNaqUyPybBenXfGQbM
+        eTAStDU4CSp0wY3gj8aXyi/Q7a1xyCiJcZMg934/DkOX5riDrmow3dTuwkwZ
+        MCmGh6uAebWjPL0oHnSi605vuIoG4/5oHEfdeNgn0ziKAsGnpfN2hwWTdgeK
+        Wnu9e6FO9lA4is5AOyTUoxRfejykhy8rk67sFo2IeXhU+DN6SMADpSwQPK6o
+        vDirTnJTmYcnKP4Ezq/3knT5j7BRG/YRysNj4ftS6+q1BK0yhXIG5H4GnyvH
+        FpBu7U+3VeyTRI0U/JmHF+A8UW6vofpv7CmOzwui4MVMc0y3FyN5eAbht6lX
+        BxTNhnn4W+MJZlBqv4K3qZW4wEzQ2s+NnGTYaBS+KCm61fid0vpWyqJhbDR6
+        Z+xJGYxFzL7S6tgDUD+GerMgaZuNi0+Vr8QMtbOGiKkVPrWl8UW1LDeJOqj6
+        auvaYvZAgMsuPrd0wLqRo6v+4LrTHwwGNPrRzMNjg9/sph2+FpvWvyufz6FA
+        41vXByu/A10fuKBLaMXWVsMokzvx/THRmReUIK1oecxA/THWRhGVbOnplBxL
+        rNZQBGK9TGjAI7gmFzMkXSaoiaKionvLrRQNozWxl911lvefReLfv1j8AlA5
+        oV4NBAAA
+    http_version: 
+  recorded_at: Tue, 28 Jul 2015 12:49:09 GMT
+recorded_with: VCR 2.9.3
