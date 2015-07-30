@@ -10,14 +10,14 @@ Gem::Specification.new do |s|
   s.authors     = ["Christian Pelczarski"]
   s.email       = ["christian@minimul.com"]
   s.homepage    = "https://github.com/minimul/qbo_rails"
-  s.summary     = "Framework for communicating with QuickBooks Online that provides error handling and translation."
+  s.summary     = "Rails engine that provides QuickBooks Online API error handling."
   s.description = ""
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rails", "~> 4.2.0"
+  s.add_dependency "rails", ">= 4.2.0"
   s.add_dependency "quickbooks-ruby"
   s.add_dependency "quickbooks-ruby-base"
   s.add_development_dependency 'rspec-rails'

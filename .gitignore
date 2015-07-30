@@ -12,3 +12,4 @@ todo.txt
 .ruby-version
 Gemfile.lock
 .irbrc
+*.gem
