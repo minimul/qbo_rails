@@ -62,7 +62,7 @@ Example:
     address.country_sub_division_code = customer.state
     address.postal_code = customer.zip
     qb_customer.billing_address = address
-    qbo_rails.create_or_update(customer, qbo_customer)
+    qbo_rails.create_or_update(customer, qb_customer)
 
 ```
 If `customer.qbo_id` is `nil` then a create request is sent to QBO. If successful the QBO Id for the new Customer record will be automatically recorded in `customer.qbo_id`. Therefore, the next time `qbo_rails.create_or_update(customer, qbo_customer)` for this customer is called an `update` request will be sent. Sending an update first involves querying QBO to get the latest sync token so it is nice to DRY up that procedure.
