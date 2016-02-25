@@ -12,7 +12,7 @@ The `qbo_rails` gem depends on both the [quickbooks-ruby](https://github.com/ruc
 ## Quick Start Guide
 - Add `gem 'qbo_rails'`
 - `bundle`
-- `bundle exec qbo_rails:install`
+- `rails generate qbo_rails:install`
   - this creates:
     - `config/initializers/qbo_rails.rb`
     - db migration for the `qbo_errors` table
