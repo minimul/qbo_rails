@@ -122,6 +122,24 @@ QBO API Errors are recorded in the `QboError` model. The column names are:
             )
 ```
 
+##### Adding custom QboError columns
+For example, let's say I want to record an association to a `qbo_account` model. Use the `before_create` callback to populate the column. e.g.:
+
+```ruby
+class QboError < ActiveRecord::Base
+  belongs_to :resource, polymorphic: true
+  belongs_to :qbo_account
+  before_create :set_qbo_account
+
+  private
+
+    def set_qbo_account
+      self.qbo_account = self.resource.try(:import_file).try(:qbo_account)
+    end
+
+end
+```
+
 The columns `resource_type` and `resource_id` are for recording the ActiveRecord model and are ready-to-go for polymorphic associations.
 
 #### Usage: Responding to an error

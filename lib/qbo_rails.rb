@@ -73,7 +73,7 @@ class QboRails
   def qbo_error_params(exception)
     @error = {
       message: exception.message[0..250],
-      body: "#{exception}\n\n#{exception.message}\n\n#{exception.backtrace}",
+      body: "#{exception}\n\n#{exception.message}\n\n#{exception.backtrace.take(10)}",
       resource_type: @record.try(:class).try(:name),
       resource_id: @record.try(:id),
       request_xml: request_xml(exception)
